@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squirrel Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-panel">
+            <h1>🐿️ Squirrel Schedule</h1>
+            <div id="time-display"></div>
+            <div id="activity-display"></div>
+        </div>
+        
+        <div class="scene" id="scene">
+            <div class="sky" id="sky"></div>
+            <div class="ground"></div>
+            
+            <!-- Squirrel pixel art -->
+            <div class="squirrel" id="squirrel">
+                <!-- Body -->
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel tail"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel ear"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel eye"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel leg"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel leg"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+            </div>
+            
+            <!-- Sleep indicator (ZZZ) -->
+            <div class="sleep-indicator" id="sleep-zzz">
+                <div class="zzz">Z</div>
+                <div class="zzz">Z</div>
+                <div class="zzz">Z</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
