@@ -18,53 +18,111 @@
             <div class="sky" id="sky"></div>
             <div class="ground"></div>
             
-            <!-- Squirrel pixel art -->
+            <!-- Squirrel pixel art (Enhanced) -->
             <div class="squirrel" id="squirrel">
-                <!-- Body -->
-                <div class="pixel-row">
+                <!-- Tail (top rows - fluffy and animated) -->
+                <div class="pixel-row tail-row">
                     <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row tail-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel tail-tip"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row tail-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail-tip"></div>
                     <div class="pixel tail"></div>
                     <div class="pixel tail"></div>
                     <div class="pixel tail"></div>
+                    <div class="pixel tail"></div>
+                    <div class="pixel tail-tip"></div>
                     <div class="pixel empty"></div>
                 </div>
                 <div class="pixel-row">
                     <div class="pixel empty"></div>
                     <div class="pixel tail"></div>
                     <div class="pixel tail"></div>
+                    <div class="pixel tail-dark"></div>
+                    <div class="pixel tail-dark"></div>
                     <div class="pixel tail"></div>
-                    <div class="pixel tail"></div>
-                    <div class="pixel tail"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
                 </div>
+                
+                <!-- Body (main torso) -->
                 <div class="pixel-row">
-                    <div class="pixel tail"></div>
-                    <div class="pixel tail"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel tail-dark"></div>
                     <div class="pixel body"></div>
                     <div class="pixel body"></div>
-                    <div class="pixel body"></div>
-                    <div class="pixel tail"></div>
+                    <div class="pixel body-light"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
                 </div>
                 <div class="pixel-row">
                     <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
                     <div class="pixel body"></div>
                     <div class="pixel body"></div>
-                    <div class="pixel body"></div>
-                    <div class="pixel body"></div>
-                    <div class="pixel body"></div>
+                    <div class="pixel body-light"></div>
+                    <div class="pixel body-light"></div>
+                    <div class="pixel belly"></div>
+                    <div class="pixel empty"></div>
                 </div>
                 <div class="pixel-row">
                     <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel body-light"></div>
+                    <div class="pixel belly"></div>
+                    <div class="pixel belly"></div>
+                    <div class="pixel belly"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                
+                <!-- Head with ears -->
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel ear"></div>
                     <div class="pixel head"></div>
                     <div class="pixel head"></div>
                     <div class="pixel head"></div>
-                    <div class="pixel body"></div>
+                    <div class="pixel ear"></div>
+                    <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
                 </div>
                 <div class="pixel-row">
                     <div class="pixel ear"></div>
+                    <div class="pixel ear-dark"></div>
                     <div class="pixel head"></div>
-                    <div class="pixel eye"></div>
+                    <div class="pixel head-light"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel ear-dark"></div>
+                    <div class="pixel ear"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                
+                <!-- Face with details -->
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel head"></div>
+                    <div class="pixel eye" id="left-eye"></div>
+                    <div class="pixel head-light"></div>
+                    <div class="pixel eye" id="right-eye"></div>
                     <div class="pixel head"></div>
                     <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
@@ -72,16 +130,52 @@
                 <div class="pixel-row">
                     <div class="pixel empty"></div>
                     <div class="pixel head"></div>
-                    <div class="pixel head"></div>
+                    <div class="pixel cheek" id="left-cheek"></div>
+                    <div class="pixel snout"></div>
+                    <div class="pixel cheek" id="right-cheek"></div>
                     <div class="pixel head"></div>
                     <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
                 </div>
                 <div class="pixel-row">
                     <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel snout"></div>
+                    <div class="pixel nose"></div>
+                    <div class="pixel snout"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                
+                <!-- Arms and Legs -->
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel arm"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel belly"></div>
+                    <div class="pixel body"></div>
+                    <div class="pixel arm"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel paw"></div>
                     <div class="pixel leg"></div>
                     <div class="pixel empty"></div>
                     <div class="pixel leg"></div>
+                    <div class="pixel paw"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                </div>
+                <div class="pixel-row">
+                    <div class="pixel empty"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel paw"></div>
+                    <div class="pixel empty"></div>
+                    <div class="pixel paw"></div>
+                    <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
                     <div class="pixel empty"></div>
                 </div>

@@ -93,18 +93,20 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    transition: left 0.5s ease-out, bottom 0.3s ease-out;
 }
 
 .pixel-row {
     display: flex;
-    height: 15px;
+    height: 12px;
     line-height: 0;
 }
 
 .pixel {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
 }
 
 .pixel.empty {
@@ -112,28 +114,79 @@ body {
     border: none;
 }
 
+/* Body colors with more depth */
 .pixel.body {
     background: #D2691E;
 }
 
+.pixel.body-light {
+    background: #E8974F;
+}
+
+.pixel.belly {
+    background: #F4E8D8;
+}
+
+/* Head colors */
 .pixel.head {
     background: #CD853F;
 }
 
+.pixel.head-light {
+    background: #DEB887;
+}
+
+.pixel.snout {
+    background: #F4E8D8;
+}
+
+.pixel.nose {
+    background: #8B4513;
+}
+
+/* Tail with gradient effect */
 .pixel.tail {
     background: #A0522D;
 }
 
-.pixel.ear {
+.pixel.tail-dark {
     background: #8B4513;
 }
 
+.pixel.tail-tip {
+    background: #CD853F;
+}
+
+/* Ears */
+.pixel.ear {
+    background: #CD853F;
+}
+
+.pixel.ear-dark {
+    background: #8B4513;
+}
+
+/* Eyes with animation support */
 .pixel.eye {
     background: #000;
 }
 
+/* Cheeks that can puff */
+.pixel.cheek {
+    background: #F4E8D8;
+}
+
+/* Arms and legs */
+.pixel.arm {
+    background: #D2691E;
+}
+
 .pixel.leg {
     background: #8B4513;
+}
+
+.pixel.paw {
+    background: #A0522D;
 }
 
 /* Playing animation (bouncing) */
@@ -158,8 +211,104 @@ body {
     }
 }
 
+/* Tail wagging animation */
+@keyframes tail-wag {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Eye blink animation */
+@keyframes blink {
+    0%, 90%, 100% {
+        height: 100%;
+    }
+    95% {
+        height: 25%;
+    }
+}
+
+/* Cheek puff animation (eating) */
+@keyframes cheek-puff {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Horizontal scurrying */
+@keyframes scurry {
+    0% {
+        left: 30%;
+    }
+    50% {
+        left: 70%;
+    }
+    100% {
+        left: 30%;
+    }
+}
+
+/* Jump to different positions */
+@keyframes jump-around {
+    0%, 100% {
+        left: 50%;
+        bottom: 30%;
+    }
+    25% {
+        left: 35%;
+        bottom: 45%;
+    }
+    50% {
+        left: 65%;
+        bottom: 35%;
+    }
+    75% {
+        left: 40%;
+        bottom: 50%;
+    }
+}
+
+/* Climbing/running motion with leg movement */
+@keyframes run-in-place {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) scaleY(1);
+    }
+    25% {
+        transform: translateX(-50%) translateY(-3px) scaleY(0.98);
+    }
+    75% {
+        transform: translateX(-50%) translateY(-3px) scaleY(0.98);
+    }
+}
+
 .squirrel.playing {
-    animation: bounce 1s ease-in-out infinite, wiggle 2s ease-in-out infinite;
+    animation: jump-around 8s ease-in-out infinite, run-in-place 0.3s ease-in-out infinite;
+}
+
+/* Apply tail wagging to tail pixels during play */
+.squirrel.playing .tail-row {
+    transform-origin: bottom center;
+    animation: tail-wag 0.6s ease-in-out infinite;
+}
+
+/* Eye blinking */
+.squirrel.playing .pixel.eye {
+    animation: blink 4s ease-in-out infinite;
+}
+
+/* Cheek puffing (eating motion) */
+.squirrel.playing .pixel.cheek {
+    animation: cheek-puff 2s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 /* Sleeping animation (gentle breathing) */
@@ -247,11 +396,11 @@ body {
     }
     
     .pixel-row {
-        height: 12px;
+        height: 10px;
     }
     
     .pixel {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
     }
 }
