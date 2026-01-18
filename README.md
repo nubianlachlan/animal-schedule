@@ -4,9 +4,15 @@ A simple, animated web app featuring a pixel art squirrel that follows a daily s
 
 ## 🌟 Features
 
-- **Pixel Art Squirrel**: Custom-designed retro pixel art character
+- **Enhanced Pixel Art Squirrel**: Detailed retro pixel art character with 8x15 grid, multiple color shades, and distinct features (fluffy tail, ears, eyes, snout, paws)
+- **Rich Animations**:
+  - **Tail Wagging**: Dynamic tail movement independent of body
+  - **Eye Blinking**: Realistic blinking animation
+  - **Cheek Puffing**: Eating motion with cheek expansion
+  - **Jumping Around**: Squirrel moves to different positions across the scene
+  - **Running Motion**: Subtle in-place running animation
 - **Time-Based Behavior**: 
-  - **Daytime (6 AM - 8 PM)**: Squirrel plays and gathers acorns with bouncing and wiggling animations
+  - **Daytime (6 AM - 8 PM)**: Squirrel plays and gathers acorns with multiple simultaneous animations
   - **Nighttime (8 PM - 6 AM)**: Squirrel sleeps peacefully with gentle breathing animation and floating "Z" letters
 - **Dynamic Scene**: Sky and lighting changes automatically based on time of day
 - **Live Clock**: Real-time display of current day and time
@@ -41,8 +47,11 @@ Then navigate to `http://localhost:8080` in your browser.
 
 ## 🛠️ Technical Details
 
-- **HTML5**: Semantic structure with pixel art grid layout
-- **CSS3**: Animations using keyframes (bounce, wiggle, breathe, float-up)
+- **HTML5**: Semantic structure with enhanced 8x15 pixel art grid layout
+- **CSS3**: Multiple layered animations using keyframes:
+  - Position-based: jump-around, run-in-place
+  - Component-based: tail-wag, blink, cheek-puff
+  - Scene: breathe, float-up
 - **Vanilla JavaScript**: Time detection and DOM manipulation
 - **No build process**: Ready to deploy to GitHub Pages or any static host
 
@@ -52,7 +61,7 @@ The squirrel follows this daily schedule:
 
 | Time | Activity | Animation |
 |------|----------|-----------|
-| 6:00 AM - 8:00 PM | Playing & gathering acorns | Bouncing and wiggling |
+| 6:00 AM - 8:00 PM | Playing & gathering acorns | Jumping around, tail wagging, eye blinking, cheek puffing, running motion |
 | 8:00 PM - 6:00 AM | Sleeping | Gentle breathing with floating Z's |
 
 ## 🎨 Customization
